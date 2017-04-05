@@ -1,0 +1,52 @@
+{
+  "manifest_version": 2,
+  "name": "I-Motivational",
+  "description": "This extension shows a Google Image search result for the current page",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "js": [
+        "popup.js",
+        "js/main.js",
+        "BenAS3HTML.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://www.x-in-y.com/sko2013/player/Output/BenAS3HTML_Files/BenAS3HTML.js"
+      ]
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://www.x-in-y.com/sko2013/player/Output/BenAS3HTML_Files/BenAS3HTML.js; object-src 'self'",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Autotutor"
+  },
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "https://ajax.googleapis.com/",
+    "tabs",
+    "http://*/*", "https://*/*"
+  ],
+  "sandbox": {
+    "pages": [
+      "BenAS3HTML.js",
+      "js/main.js"
+    ],
+    "content_security_policy": "sandbox allow-scripts; script-src 'self' 'unsafe-eval'; script-src https://www.x-in-y.com/sko2013/player/Output/BenAS3HTML_Files/BenAS3HTML.js 'unsafe-eval'"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "js/main.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "all_frames": true
+    }
+    //,
+    // {"js": ["js/sub.js"], "matches": ["<all_urls>"], "all_frames":true}
+  ]
+}
