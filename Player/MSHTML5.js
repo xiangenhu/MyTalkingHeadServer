@@ -1463,8 +1463,8 @@ function MSHTML5Control(idDiv, project, base, widthEmbed, heightEmbed)
         if (sdom != "" && tdom != "" && sdom != tdom)
         {
             temparray = s.split(sdom);
-            salt = temparray.join(tdom);
-            //salt = temparray.join("www.x-in-y.com");
+            //salt = temparray.join(tdom);
+            salt = temparray.join("www.x-in-y.com");
             debugTrace(" -> remapping "+s+" to "+salt);
             return salt;
         }    
