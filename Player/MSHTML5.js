@@ -1450,25 +1450,36 @@ function MSHTML5Control(idDiv, project, base, widthEmbed, heightEmbed)
     }    
 
     function filterDomain(s)
-    {
+    {   
         var tdom = "";
+        var output = "";
         var t = qualifyURL(base);
-        if (t.substr(0,8)=="https://") {t = t.substr(8); tdom = t.substr(0, t.indexOf("/"));}
+        if (t.substr(0,8)=="https://") {
+            t = t.substr(8); 
+            tdom = t.substr(0, t.indexOf("/"));}
         else if (t.substr(0,7)=="http://") {t = t.substr(7); tdom = t.substr(0, t.indexOf("/"));}
         var sdom = "";
         var ssl = false;
-        if (s.substr(0,8)=="https://") {var ss = s.substr(8); sdom = ss.substr(0, ss.indexOf("/")); ssl = true;}
-        else if (s.substr(0,7)=="http://") {var ss = s.substr(7); sdom = ss.substr(0, ss.indexOf("/"));}
+        if (s.substr(0,8)=="https://") {
+            var ss = s.substr(8); 
+            sdom = ss.substr(0, ss.indexOf("/")); 
+            ssl = true;
+        }
+        else if (s.substr(0,7)=="http://") {
+            var ss = s.substr(7); sdom = ss.substr(0, ss.indexOf("/"));}
         debugTrace("project js coming from domain "+tdom+" and is requesting a url from domain "+sdom);
         if (sdom != "" && tdom != "" && sdom != tdom)
         {
             temparray = s.split(sdom);
+
             //salt = temparray.join(tdom);
             salt = temparray.join("www.x-in-y.com");
             debugTrace(" -> remapping "+s+" to "+salt);
-            return salt;
+            output = salt;
         }    
-        else return s;
+        else { output=s; }
+
+        return output.replace(/^http:\/\//i, 'https://').replace("localhost", "x-in-y.com")
     }
     
     function qualifyURL(url) 
