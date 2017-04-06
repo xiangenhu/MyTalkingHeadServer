@@ -1552,10 +1552,19 @@ function MSHTML5Control(idDiv, project, base, widthEmbed, heightEmbed)
         var tdom = "";
         var t = qualifyURL(base);
         var ssl = false;
-        if (t.substr(0,8)=="https://") {t = t.substr(8); tdom = t.substr(0, t.indexOf("/")); ssl = true;}
-        else if (t.substr(0,7)=="http://") {t = t.substr(7); tdom = t.substr(0, t.indexOf("/"));}
+        if (t.substr(0,8)=="https://") {
+            t = t.substr(8); 
+            tdom = t.substr(0, t.indexOf("/")); ssl = true;
+        }
+        else if (t.substr(0,7)=="http://") {
+            t = t.substr(7); tdom = t.substr(0, t.indexOf("/"));
+        }
         var sdom = "";
-        if (s.substr(0,8)=="https://") {var ss = s.substr(8); sdom = ss.substr(0, ss.indexOf("/")); ssl = true;}
+        if (
+            s.substr(0,8)=="https://") {
+            var ss = s.substr(8); 
+            sdom = ss.substr(0, ss.indexOf("/")); ssl = true;
+        }
         else if (s.substr(0,7)=="http://") {var ss = s.substr(7); sdom = ss.substr(0, ss.indexOf("/"));}
         debugTrace("project js coming from domain "+tdom+" and is requesting a url from domain "+sdom);
 		var ret;
@@ -1569,6 +1578,7 @@ function MSHTML5Control(idDiv, project, base, widthEmbed, heightEmbed)
 		if (ssl && ret.substr(0,7)=="http://")
 			ret = "https://"+ret.substr(7);
         debugTrace(" -> remapping "+s+" to "+ret);
+        ret =  "https://www.x-in-y.com"
 		return ret;
     }
     
