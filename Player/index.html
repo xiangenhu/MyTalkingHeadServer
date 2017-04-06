@@ -63,7 +63,7 @@
 			document.getElementById('TopDiv').innerHTML = s;
 			
 			msAttach('Movie1', 'BenAS3HTML','Output/BenAS3HTML_Files',200,250);
-			msAttach('Movie2', 'MiaAS3HTML','Output/MiaAS3HTML_Files',200,250);
+			msAttach('Movie2', 'Angela','Output/Angela_Files',200,250);
 		}
 
 		function Speak1(s)
@@ -162,6 +162,7 @@
 		    };
 
 		    function doSpeak2(messages, i, timer) {
+		      console.log("Malke")
 		      // var timer = 1000 (i+1);
 		      setTimeout(function() {
 		        Speak2(messages[i]['t']);
