@@ -129,6 +129,55 @@
 		{
 			// One or more variables changed
 		}
+		// Others
+		$(document).ready(function(){
+		  onLoad();
+
+		    function splitmessages(msgJSON){
+		        return JSON.parse(unescape( msgJSON ));
+		    }
+
+		  function explode(){
+		    var messages = splitmessages(gup('text', window.location.href));
+		    // function doSpeak(messages, i) {
+		    //   var timer = 1000 * 2 * (i+1);
+		    //   setTimeout(function() {
+		    //     Speak1(messages[i]['t']);
+		    //   }, timer);
+		    // }
+		    function doSpeak1(messages, i, timer) {
+		      // var timer = 1000 * (i+1);
+		      setTimeout(function() {
+		        Speak1(messages[i]['t']);
+		      }, timer);
+		    };
+
+		    function doSpeak2(messages, i, timer) {
+		      // var timer = 1000 (i+1);
+		      setTimeout(function() {
+		        Speak2(messages[i]['t']);
+		      }, timer);
+		    };
+
+		    var timer = 1000;
+		    function setT(timer){
+		        return timer + 3000;
+		    }
+		    for (var i=0; i<messages.length;i++){
+		          console.log("MESSAFES" + messages[i]['g']);
+		          if(messages[i]['g'] == "0"){
+		            doSpeak1(messages, i, timer);
+		            timer = setT(timer)
+		            console.log("GEN:" + "1");
+		          } else{
+		            doSpeak2(messages, i, timer);
+		            timer = setT(timer)
+		            console.log("GEN:" + "2");
+		          }
+		    };
+		  };
+		  explode();
+		});
 		</script>
 
 	</body>
