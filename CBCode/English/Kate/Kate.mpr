@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project singlefile="true" flashversion="8" size="200,250" initialpresenting="false" loader="standard" template="AIChatProgramD">
+<project html5="true" singlefile="true" size="200,250" htmlextctl="true" htmlextevt="true" initialpresenting="false" variables="Text=&quot;0&quot;;" flashversion="8" loader="standard" template="AIChatProgramD">
 	<include ref="Library/Objects/Bubbles/Bubble2.xml"/>
 	<include ref="Library/Objects/AudioButton/MuteBtn1.xml"/>
 	<include ref="Library/Objects/EntryPanels/ChatEntry1.xml"/>
-	<variable id="Text" value="0"/>
+	
 	<stage id="Stage1">
 		<scene id="Scene1" name="Scene 1">
 			<character id="Char1" name="Kate" position="0,67" size="200,160" animationlibrary="Library/Characters/KateHead/KateHead.xml" addons="Library/Addons/RW2HeadClothesPack1/RW2HeadClothesPack1.xml,Library/Addons/RW2HeadClothesPack2/RW2HeadClothesPack2.xml,Library/Addons/RW2HeadHairPack1/RW2HeadHairPack1.xml,Library/Addons/RW2HeadHairPack2/RW2HeadHairPack2.xml,Library/Addons/RW2HeadHairPack3/RW2HeadHairPack3.xml,Library/Addons/RW2HeadMedicalPack/RW2HeadMedicalPack.xml,Library/Addons/RW2HeadPropPack1/RW2HeadPropPack1.xml" defaultvoice="Neo Kate" defaultidle="eyetracker" top="blouse2" hair="midlengthblonde"/>
