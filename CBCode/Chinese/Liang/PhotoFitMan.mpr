@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project singlefile="true" flashversion="8" size="200,250" initialpresenting="false" loader="standard" template="AIChatProgramD">
+<project html5="true" singlefile="true" size="200,250" htmlextctl="true" htmlextevt="true" initialpresenting="false" variables="Text=&quot;0&quot;;" flashversion="8" loader="standard" template="AIChatProgramD">
 	<include ref="Library/Objects/Bubbles/Bubble2.xml"/>
 	<include ref="Library/Objects/AudioButton/MuteBtn1.xml"/>
 	<include ref="Library/Objects/EntryPanels/ChatEntry1.xml"/>
-	<variable id="Text" value="0"/>
+	
 	<stage id="Stage1">
 		<scene id="Scene1" name="Scene 1">
 			<character id="Char1" name="PhotoFit Man" position="0,67" size="200,160" animationlibrary="Library/Characters/PhotoFitManHead/PhotoFitManHead.xml" addons="Library/Addons/RM2HeadClothesPack1/RM2HeadClothesPack1.xml,Library/Addons/RM2HeadClothesPack2/RM2HeadClothesPack2.xml,Library/Addons/RM2HeadHairPack1/RM2HeadHairPack1.xml,Library/Addons/RM2HeadHairPack2/RM2HeadHairPack2.xml,Library/Addons/RM2HeadHairPack3/RM2HeadHairPack3.xml,Library/Addons/RM2HeadIndustryPack/RM2HeadIndustryPack.xml,Library/Addons/RM2HeadPolicePack/RM2HeadPolicePack.xml,Library/Addons/RM2HeadPropPack1/RM2HeadPropPack1.xml,Library/Addons/RM2HeadSoldierPack/RM2HeadSoldierPack.xml" defaultvoice="Neo Liang" defaultidle="eyetracker" top="shortsleeve1" hair="messygray" topcolor="44,38,43" faceref="Library\Characters\PhotoFitManHead\PhotoFitMan.fg"/>
