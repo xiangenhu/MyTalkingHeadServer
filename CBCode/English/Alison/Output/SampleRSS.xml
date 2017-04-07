@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss>
+<channel>
+  <item>
+    <title>Story number one</title>
+    <link>http://www.mediasemantics.com</link>
+    <description>This is story number one.</description>
+  </item>
+  <item>
+    <title>Story number two</title>
+    <link>http://www.mediasemantics.com</link>
+    <description>This is story number two.</description>
+  </item>
+  <item>
+    <title>Story number three</title>
+    <link>http://www.mediasemantics.com</link>
+    <description>This is story number three.</description>
+  </item>
+</channel>
+</rss>
+
+
