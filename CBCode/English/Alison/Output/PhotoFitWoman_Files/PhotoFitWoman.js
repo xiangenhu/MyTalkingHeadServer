@@ -1,5 +1,5 @@
 window.PhotoFitWoman_Dir = {
-	"width":200, "height":250, "presenting":false, "fps":12, "modules":"rasterctl,bubble", "version":"5.4.7.0", "project":"PhotoFitWoman", "allowautoplay":"detect", "variables":"c.Text=\"0\";", "htmlrss":"true", "htmlpersist":"true",
+	"width":200, "height":250, "presenting":false, "fps":12, "modules":"rasterctl,bubble", "version":"5.4.7.0", "project":"PhotoFitWoman", "allowautoplay":"detect", "variables":"c.Text=\"0\";",
 	"items":{
 		"Scene1":{
 			"type":"scene", "name":"Scene 1",
