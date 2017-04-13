@@ -1547,8 +1547,9 @@ function MSHTML5Control(idDiv, project, base, widthEmbed, heightEmbed)
 				ctl.AIMLSequence++;
 			}
 			s += '&callback=?';
-            s.replace('https', 'http');
 			infoTrace("Calling "+s);
+            console.log("Debug" + s)
+            s.replace('https', 'http');
 			$.ajax({ url: s,
 				data: {}, 
 				dataType: "jsonp", 
