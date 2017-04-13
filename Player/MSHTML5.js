@@ -1479,7 +1479,7 @@ function MSHTML5Control(idDiv, project, base, widthEmbed, heightEmbed)
         }    
         else { output=s; }
 
-        return output.replace(/^http:\/\//i, 'https://').replace("localhost", "x-in-y.com")
+        return output.replace(/^http:\/\//i, 'http://').replace("localhost", "x-in-y.com")
     }
     
     function qualifyURL(url) 
