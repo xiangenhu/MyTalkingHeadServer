@@ -1547,7 +1547,7 @@ function MSHTML5Control(idDiv, project, base, widthEmbed, heightEmbed)
 				ctl.AIMLSequence++;
 			}
 			s += '&callback=?';
-            s.replace('http', 'https');
+            //s.replace('http', 'http');
 			infoTrace("Calling "+s);
 			$.ajax({ url: s,
 				data: {}, 
